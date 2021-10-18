@@ -2,6 +2,8 @@ package com.example.weread;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -43,5 +45,25 @@ public class Home extends AppCompatActivity {
                 return false;
             }
         });
+
+        int []image = {
+                R.drawable.dr_pergi, R.drawable.dr_sebatas_mimpi,
+                R.drawable.dr_hujan, R.drawable.dr_renungan_pagi,
+                R.drawable.dr_anarrative, R.drawable.dr_the_spine,
+                R.drawable.dr_sang_pemimpi, R.drawable.dr_pulang
+        };
+
+        RecyclerView recyclerView;
+        AdapterRecyclerViewHome adapterRecyclerViewHome;
+        RecyclerView.LayoutManager layoutManager;
+
+        recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+
+        layoutManager = new GridLayoutManager(this,2);
+        recyclerView.setLayoutManager(layoutManager);
+
+        adapterRecyclerViewHome = new AdapterRecyclerViewHome(image);
+        recyclerView.setAdapter(adapterRecyclerViewHome);
     }
 }

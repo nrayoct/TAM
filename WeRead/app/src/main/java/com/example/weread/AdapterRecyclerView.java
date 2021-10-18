@@ -10,8 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerView.ViewHolder>{
 
-
-
     int []image;
 
     public AdapterRecyclerView(int[] image){
@@ -31,7 +29,7 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_item_library,parent,false);
         ViewHolder ViewHolder = new ViewHolder(view);
         return ViewHolder;
     }
