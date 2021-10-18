@@ -33,9 +33,10 @@
         android:layout_alignBottom="@+id/search_field"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="30dp"
+        android:padding="8dp"
         android:background="@drawable/search_layout"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_search_foreground" />
+        android:src="@drawable/ic_baseline_search" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/result_list"
