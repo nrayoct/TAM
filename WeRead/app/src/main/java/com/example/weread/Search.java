@@ -40,7 +40,7 @@ public class Search extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
                     case R.id.home:
-                       startActivity(new Intent(getApplicationContext(), Home.class));
+                       startActivity(new Intent(getApplicationContext(), MainActivity.class));
                        overridePendingTransition(0,0);
                         return true;
                     case R.id.search:

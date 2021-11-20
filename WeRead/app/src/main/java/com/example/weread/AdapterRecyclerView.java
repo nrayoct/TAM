@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerView.ViewHolder>{
 
+    //untuk library
     int []image;
 
     public AdapterRecyclerView(int[] image){
