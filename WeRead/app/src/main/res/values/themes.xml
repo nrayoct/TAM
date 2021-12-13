@@ -7,7 +7,11 @@
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
+<<<<<<< HEAD
         <item name="colorSecondaryVariant">@color/teal_700</item>
+=======
+        <item name="colorSecondaryVariant">@color/blue_700</item>
+>>>>>>> d30b291 (final 1.0)
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>

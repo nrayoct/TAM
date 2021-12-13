@@ -3,10 +3,20 @@ package com.example.weread;
 import static java.lang.System.load;
 
 import android.content.Context;
+<<<<<<< HEAD
+=======
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.ResultReceiver;
+>>>>>>> d30b291 (final 1.0)
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+<<<<<<< HEAD
+=======
+import android.widget.LinearLayout;
+>>>>>>> d30b291 (final 1.0)
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -45,6 +55,18 @@ public class AdapterRecyclerViewHome extends RecyclerView.Adapter<AdapterRecycle
         Glide.with(mContext)
             .load(bookList.get(position).getImageURL())
             .into(holder.imageView);
+<<<<<<< HEAD
+=======
+        String book_id = bookList.get(position).getId().toString();
+        holder.ll_layout.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent newActivity1 = new Intent(mContext, ContentActivity.class);
+                newActivity1.putExtra("book_id", book_id);
+                newActivity1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(newActivity1);
+            }
+        });
+>>>>>>> d30b291 (final 1.0)
 //        holder.imageView.setImageResource(image[position]);
     }
 
@@ -56,11 +78,19 @@ public class AdapterRecyclerViewHome extends RecyclerView.Adapter<AdapterRecycle
     public class ViewHolderHome extends RecyclerView.ViewHolder{
         ImageView imageView;
         TextView textView;
+<<<<<<< HEAD
+=======
+        LinearLayout ll_layout;
+>>>>>>> d30b291 (final 1.0)
 
         public ViewHolderHome(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.image_book);
             textView = itemView.findViewById(R.id.tv_title);
+<<<<<<< HEAD
+=======
+            ll_layout = itemView.findViewById(R.id.ll_layout);
+>>>>>>> d30b291 (final 1.0)
         }
     }
 

@@ -76,10 +76,18 @@ public class MainActivity extends AppCompatActivity {
                    case R.id.search:
                        startActivity(new Intent(getApplicationContext(), Search.class));
                        overridePendingTransition(0,0);
+<<<<<<< HEAD
+=======
+                       finishAffinity();
+>>>>>>> d30b291 (final 1.0)
                        return true;
                    case R.id.library:
                        startActivity(new Intent(getApplicationContext(), Library.class));
                        overridePendingTransition(0,0);
+<<<<<<< HEAD
+=======
+                       finishAffinity();
+>>>>>>> d30b291 (final 1.0)
                        return true;
                }
                 return false;
@@ -89,7 +97,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void GetDataFromFirebase() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> d30b291 (final 1.0)
         Query query = myRef.child("book");
         query.addValueEventListener(new ValueEventListener() {
             @Override
@@ -100,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
 
                     book.setImageURL(snapshot.child("image").getValue().toString());
                     book.setTitle(snapshot.child("title").getValue().toString());
+<<<<<<< HEAD
+=======
+                    book.setId(snapshot.child("id").getValue().toString());
+>>>>>>> d30b291 (final 1.0)
 
                     bookList.add(book);
                 }
